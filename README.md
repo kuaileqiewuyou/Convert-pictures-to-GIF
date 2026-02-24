@@ -1,6 +1,6 @@
 # GIF Maker（Spring Boot）
 
-一个本地网页应用：上传多张图片，生成 GIF 并下载。
+一个本地网页应用：上传多张图片，生成 GIF 并下载。（全程使用vibe coding进行开发）
 
 ## 1. 本地运行（Maven）
 
