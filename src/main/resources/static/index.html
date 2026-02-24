@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GIF Maker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+SC:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20260223" />
+</head>
+<body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+
+  <main class="container">
+    <section class="panel">
+      <p class="kicker">SPRING BOOT + GIF 生成器</p>
+      <h1>上传图片，生成 GIF</h1>
+      <p class="desc">选择多张图片，一键生成并下载 GIF。</p>
+
+      <form id="gifForm">
+        <label class="dropzone" id="dropzone" for="filesInput">
+          <input id="filesInput" type="file" accept="image/*" multiple required />
+          <span id="fileHint">点击或拖拽图片到这里（至少 2 张）</span>
+        </label>
+
+        <div class="controls">
+          <label>
+            帧间隔（毫秒）
+            <input id="delayMs" type="number" min="50" max="5000" value="300" />
+          </label>
+          <label class="checkbox">
+            <input id="loop" type="checkbox" checked />
+            循环播放
+          </label>
+        </div>
+
+        <button type="submit" id="submitBtn">生成 GIF</button>
+      </form>
+
+      <p id="status" class="status"></p>
+
+      <div id="result" class="result hidden">
+        <img id="preview" alt="GIF 预览" />
+        <a id="downloadLink" download="generated.gif">下载 GIF</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js?v=20260223"></script>
+</body>
+</html>
